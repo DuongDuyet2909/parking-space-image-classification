@@ -1,0 +1,23 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Environment variables
+.env
+
+# Dataset không đưa trực tiếp vào Git
+clf-data/
+clf-data.zip
+
+# File hệ thống
+.DS_Store
+Thumbs.db
