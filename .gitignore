@@ -21,3 +21,7 @@ clf-data.zip
 # File hệ thống
 .DS_Store
 Thumbs.db
+
+# Local verification outputs
+.verification/
+.mpl-cache/

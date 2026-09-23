@@ -1,0 +1,7 @@
+{
+  "method": "SHA-256 of image file bytes; sorted class paths and stratified 80/20 split with seed 42",
+  "image_count": 6090,
+  "unique_file_hash_count": 6090,
+  "test_images_with_hash_in_train": 0,
+  "limitations": "Does not detect near-duplicate images or shared camera/time groups. Dataset source and license remain unverified."
+}

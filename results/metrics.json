@@ -1,0 +1,61 @@
+{
+  "evaluation": "stratified random image split; not camera/time-independent",
+  "seed": 42,
+  "classes": [
+    "empty",
+    "not_empty"
+  ],
+  "class_counts": {
+    "empty": 3045,
+    "not_empty": 3045
+  },
+  "train_count": 4872,
+  "test_count": 1218,
+  "best_params": {
+    "C": 10
+  },
+  "cv_accuracy": 0.9961017216869372,
+  "test_accuracy": 1.0,
+  "classification_report": {
+    "empty": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 609.0
+    },
+    "not_empty": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 609.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 1218.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 1218.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      609,
+      0
+    ],
+    [
+      0,
+      609
+    ]
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "sklearn": "1.9.0",
+    "numpy": "2.5.3"
+  }
+}
