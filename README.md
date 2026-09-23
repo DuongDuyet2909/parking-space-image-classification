@@ -1,5 +1,8 @@
 # Parking Space Image Classification
 
+![Dự đoán vị trí trống](assets/prediction-empty.png)
+![Dự đoán vị trí có xe](assets/prediction-not-empty.png)
+
 Dự án Computer Vision phân loại một vị trí đỗ xe thành:
 
 - `empty`: vị trí còn trống
