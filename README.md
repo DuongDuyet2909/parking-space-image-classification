@@ -43,9 +43,10 @@ Chỉ tải file pickle từ nguồn tin cậy.
 
 ## Dataset và huấn luyện
 
-Dataset không được đưa vào repo. Nguồn tải gốc, giấy phép dataset và nguồn
-tutorial tham khảo **chưa được xác minh**; chủ repo cần bổ sung trước khi
-phân phối dữ liệu. Ảnh trong assets là ảnh chụp kết quả, không phải ảnh đầu vào.
+Do kích thước lớn, dataset không được đẩy trực tiếp lên repository này. Bạn có thể tải dataset về máy tại: 
+👉 [Tải Dataset tại đây](https://drive.google.com/file/d/12zOiqLWDRUM7CB6s4rDQssheCIiOhoQz/view?usp=sharing)
+
+*(Ghi chú: Ảnh trong thư mục `assets` chỉ là ảnh chụp kết quả minh họa, không phải ảnh đầu vào để huấn luyện).*
 
 Chuẩn bị dữ liệu:
 ```text
