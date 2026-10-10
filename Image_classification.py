@@ -13,7 +13,7 @@ from sklearn.svm import SVC
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 
 def main():
-    # prepare data
+    # Chuẩn bị dữ liệu ảnh và nhãn.
     project_dir = os.path.dirname(os.path.abspath(__file__))
     input_dir = os.path.join(project_dir, "clf-data", "clf-data")
     parser = argparse.ArgumentParser(description="Train SVM for cropped parking-space images")
@@ -42,11 +42,11 @@ def main():
     if any(np.sum(labels == i) < 10 for i in range(len(categories))):
         parser.error('Need at least 10 images per class for test split and five-fold CV.')
 
-    # train / test split
+    # Chia tập huấn luyện (train) và tập kiểm tra (test).
     X_train, X_test, y_train, y_test = train_test_split(data, labels, test_size=0.2, stratify=labels, shuffle=True, random_state=42) # giữ tỷ lệ lớp; chưa phải chia theo camera/thời gian
 
 
-    # train classifier
+    # Huấn luyện bộ phân loại (classifier).
     clsf = SVC(kernel='linear', C=1.0) # C điều chỉnh mức phạt lỗi; sẽ được GridSearchCV chọn lại
 
     parameters = {'C': [1, 10, 100, 1000]} # gamma không có tác dụng với kernel tuyến tính
@@ -55,12 +55,12 @@ def main():
 
     grid_search.fit(X_train, y_train) # fit dữ liệu huấn luyện vào grid search để tìm các tham số tối ưu
 
-    # test performance
+    # Đánh giá mô hình được chọn trên tập test.
     best_estimator = grid_search.best_estimator_ # best_estimator_ là mô hình tốt nhất được tìm thấy từ grid search
 
     y_pred = best_estimator.predict(X_test) # dự đoán nhãn của dữ liệu kiểm tra
 
-    # print performance metrics
+    # In các chỉ số đánh giá (metrics).
     print("Best parameters:", grid_search.best_params_)
     print("Accuracy:", accuracy_score(y_test, y_pred))
     print("Classification Report:")

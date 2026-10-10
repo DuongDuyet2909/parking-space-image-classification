@@ -1,4 +1,4 @@
-# Parking Space Image Classification
+# Phân loại ảnh ô đỗ xe — Parking Space Image Classification
 
 Phân loại **ảnh đã cắt của một ô đỗ xe** thành `empty` (trống) hoặc
 `not_empty` (có phương tiện), sử dụng SVM tuyến tính.
@@ -135,3 +135,22 @@ cùng camera hoặc các khung hình sát nhau. Chưa có metadata để đánh 
 ```powershell
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
+
+## Thuật ngữ dùng trong repo
+
+| Thuật ngữ | Ý nghĩa |
+| --- | --- |
+| SVM — Support Vector Machine | Máy vector hỗ trợ; dự án dùng kernel tuyến tính |
+| Preprocessing / flatten | Tiền xử lý / trải phẳng ảnh thành vector đặc trưng |
+| Train / predict | Huấn luyện / dự đoán bằng mô hình đã huấn luyện |
+| GridSearchCV | Tìm siêu tham số bằng quét lưới kết hợp kiểm định chéo |
+| Cross-validation (CV) / fold | Kiểm định chéo / mỗi phần dữ liệu dùng trong kiểm định chéo |
+| Stratification | Chia tập có giữ tỷ lệ các lớp |
+| Accuracy | Tỷ lệ ảnh dự đoán đúng trên tập đánh giá |
+| Precision / recall / F1 | Độ chính xác của lớp dự đoán / độ bao phủ lớp thật / trung bình điều hòa của precision và recall |
+| Confusion matrix | Ma trận nhầm lẫn; ở đây hàng là nhãn thật, cột là nhãn dự đoán |
+| Generalization / data leakage | Khả năng tổng quát hóa / rò rỉ thông tin giữa các tập |
+| Metadata | Thông tin mô tả dữ liệu, mô hình hoặc lần chạy |
+| `empty` / `not_empty` | Nhãn trong mã: ô trống / ô có phương tiện |
+
+Tên lớp và API giữ nguyên để tương thích dữ liệu và thuận tiện tra cứu. Kết quả test đã lưu không thay đổi trong lượt chuẩn hóa tài liệu này.
